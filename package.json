@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@api/climacell-docs": "file:.api/apis/climacell-docs"
+  }
+}

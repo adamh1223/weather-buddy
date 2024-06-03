@@ -3,13 +3,23 @@ body {
 }
   
 #home {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/weather.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/weather.png");
     background-size: cover;
-    height: 1000px;
+    height: 1500px;
 }
 
-.a-home-text {
-    background-color: rgba(0, 0, 0, 0.3);
+.a-home-text, #day {
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     color: white;
   }
+
+#day {
+    width: 15.5%;
+}
+
+.day-forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
