@@ -50,6 +50,8 @@ Built with:
 
 ## Link to Application
 
+
 ## Link to GitHub Repository
+https://github.com/adamh1223/weather-buddy
 
 ### <p align="center">[Back to Top](#weather-buddy)</p> 
