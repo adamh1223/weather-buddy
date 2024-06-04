@@ -42,6 +42,7 @@ Built with:
 * HTML5
 * CSS
 * JavaScript
+* Visual Crossing Weather API
 
 ## Developer
 * Adam Hussain
@@ -51,4 +52,4 @@ Built with:
 
 ## Link to GitHub Repository
 
-### <p align="center">[Back to Top](#weather-dashboard)</p> 
+### <p align="center">[Back to Top](#weather-buddy)</p> 
