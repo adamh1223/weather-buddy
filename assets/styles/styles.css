@@ -1,54 +1,68 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-  
+
 #home {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/weather.png");
     background-size: cover;
-    height: 1500px;
+    flex: 1;
+    padding: 0 0 20px 0;
 }
 
 .a-home-text, .day-forecast {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     color: white;
-  }
+}
 
 .day-forecast {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 15.5%;
 }
 
 @media (min-width: 0px) {
     .day-forecast {
-      width: 45%;
+        width: 45%;
     }
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .day-forecast {
-      width: 30%;
+        width: 30%;
     }
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .day-forecast {
-      width: 23%;
+        width: 23%;
     }
-  }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     .day-forecast {
-      width: 18%;
+        width: 18%;
     }
-  }
-  @media (min-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
     .day-forecast {
-      width: 15%;
+        width: 15%;
     }
-  }
-  @media (min-width: 1600px) {
+}
+
+@media (min-width: 1600px) {
     .day-forecast {
-      width: 13%;
+        width: 13%;
     }
-  }
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
