@@ -8,18 +8,47 @@ body {
     height: 1500px;
 }
 
-.a-home-text, #day {
+.a-home-text, .day-forecast {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     color: white;
   }
 
-#day {
-    width: 15.5%;
-}
-
 .day-forecast {
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    width: 15.5%;
 }
+
+@media (min-width: 0px) {
+    .day-forecast {
+      width: 45%;
+    }
+  }
+  @media (min-width: 768px) {
+    .day-forecast {
+      width: 30%;
+    }
+  }
+  @media (min-width: 992px) {
+    .day-forecast {
+      width: 23%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .day-forecast {
+      width: 18%;
+    }
+  }
+  @media (min-width: 1400px) {
+    .day-forecast {
+      width: 15%;
+    }
+  }
+  @media (min-width: 1600px) {
+    .day-forecast {
+      width: 13%;
+    }
+  }

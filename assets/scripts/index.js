@@ -22,21 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 const dayDate = new Date(day.datetime);
                 if (dayDate >= currentDate) {
                     forecastHtml += `
-                        <div class="day-forecast d-inline-block p-3 m-1" id="day">
-                            <h4>${new Date(day.datetime).toDateString()}:</h4>
+                        <div class="day-forecast d-inline-block p-3 m-1 text-center">
+                            <h5>${new Date(day.datetime).toDateString()}:</h5>
                             <img src="./assets/images/PNG/1st Set - Color/${day.icon}.png">
                             <h4 class="text-center"><strong>${day.temp}°F</strong></h4>
                             <p> ${day.conditions}</p>
                             <p d-inline-block><strong>H:</strong> ${day.tempmax}°F</p>
-                            <p d-inline-block><strong>L:</strong> ${day.tempmin}°F</p>
-                            ${dayDate.toDateString() === currentDate.toDateString() ? `<p><strong>Feels like:</strong> ${day.feelslike}°F</hp>` : ''}
-                            
-                            <p> ${day.description}</p>
-                            
+                            <p d-inline-block><strong>L:</strong> ${day.tempmin}°F</p>                        
                             <p><strong>Humidity:</strong> ${day.humidity}%</p>
-                            <p><strong>Wind Speed:</strong> ${day.windspeed} mph</p>
-                            <p><strong>Sunrise:</strong> ${day.sunrise}</p>
-                            <p><strong>Sunset:</strong> ${day.sunset}</p>
+                            <p><strong>Wind:</strong> ${day.windspeed} mph</p>
                         </div>
                     `;
                 }
