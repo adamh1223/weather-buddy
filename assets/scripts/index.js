@@ -6,13 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById('location-form');
     const input = document.getElementById('location-input');
     const forecastDiv = document.getElementById('forecast');
-    const locationDiv = document.getElementById('location')
+    const locationDiv = document.getElementById('location');
+    const recentSearchesList = document.getElementById('recent-searches-list');
+    const recentSearchesTitle = document.getElementById('recent-searches-title');
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         const location = input.value.trim();
         if (location) {
             fetchWeatherData(location, apiKey);
+            saveSearch(location);
+            displayRecentSearches();
         }
     });
 
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const currentDate = new Date(); // Get the current date
 
                 let forecastHtml = '';
-                let locationHTML = `<p>${data.resolvedAddress}</p>`;
+                let locationHTML = `<h4>${data.resolvedAddress}</h4>`;
 
                 days.forEach((day, index) => {
                     const dayDate = new Date(day.datetime); // Convert datetime string to Date object
@@ -54,35 +58,40 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             forecastDiv.innerHTML = forecastHtml;
             locationDiv.innerHTML = locationHTML;
-            // document.querySelectorAll('.day-forecast').forEach((div, index) => {
-            //     div.addEventListener('click', () => {
-            //         const isExpanded = div.classList.contains('expanded');
-                    
-            //         if (isExpanded) {
-            //             document.querySelectorAll('.day-forecast').forEach(d => {
-            //                 d.style.display = 'inline-block';
-            //                 d.style.width = '15.5%';
-            //                 d.classList.remove('expanded');
-            //                 const hourlyDiv = document.getElementById(`hourly-${index}`);
-            //                 hourlyDiv.style.display = 'none';
-            //                 hourlyDiv.innerHTML = '';
-            //             });
-            //         } else {
-            //             document.querySelectorAll('.day-forecast').forEach((d, i) => {
-            //                 if (i !== index) {
-            //                     d.style.display = 'none';
-            //                 } else {
-            //                     d.style.width = '100%';
-            //                     d.classList.add('expanded');
-            //                     //fetchHourlyForecast(days[index].datetime, index);
-            //                 }
-            //             });
-            //         }
-            //     });
-            // });
         })
         .catch(error => {
             console.error('Error fetching the weather data:', error);
         });
     }
-})
+
+    function saveSearch(location) {
+        let searches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+        if (!searches.includes(location)) {
+            searches.push(location);
+            localStorage.setItem('recentSearches', JSON.stringify(searches));
+        }
+    }
+
+    function displayRecentSearches() {
+        let searches = JSON.parse(localStorage.getItem('recentSearches')) || [];
+        recentSearchesList.innerHTML = '';
+        searches.forEach(search => {
+            let li = document.createElement('li');
+            li.classList.add('list-group-item');
+            let span = document.createElement('span');
+            span.textContent = search;
+            span.classList.add('search-text');
+            span.addEventListener('click', () => {
+                input.value = search;
+                fetchWeatherData(search, apiKey);
+            });
+            li.appendChild(span);
+            recentSearchesList.appendChild(li);
+            recentSearchesTitle.classList.remove('hide');
+        });
+    }
+
+    // Display recent searches on page load
+    displayRecentSearches();
+});
+

@@ -12,6 +12,10 @@ body {
     padding: 0 0 20px 0;
 }
 
+li .search-text {
+    cursor: pointer;
+}
+
 .a-home-text, .day-forecast {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
@@ -65,4 +69,12 @@ footer {
     background-color: #000;
     color: #fff;
     padding: 20px 0;
+}
+
+.hide {
+    display: none;
+}
+
+#recent-searches-list {
+    margin-right: 0;
 }
