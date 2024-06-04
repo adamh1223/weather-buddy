@@ -1,17 +1,19 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /*Viewport height*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 #home {
+    /*Reduce opacity gradient from .5 to .8 for text visibility, stylistic look*/
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/weather.png");
     background-size: cover;
     flex: 1;
     padding: 0 0 20px 0;
 }
-
+/*Cursor is a pointer only when over the search text on recent searches*/
 li .search-text {
     cursor: pointer;
 }
@@ -21,14 +23,14 @@ li .search-text {
     border-radius: 20px;
     color: white;
 }
-
+/*each day of the forecast*/
 .day-forecast {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
-
+/*media query for browser resizing*/
 @media (min-width: 0px) {
     .day-forecast {
         width: 45%;
@@ -73,8 +75,4 @@ footer {
 
 .hide {
     display: none;
-}
-
-#recent-searches-list {
-    margin-right: 0;
 }
