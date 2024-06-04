@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fetchWeatherData(location, apiKey);
             saveSearch(location);
             displayRecentSearches();
+            return location;
         }
     });
 
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(url)
             .then(response => {
                 if (!response.ok) {
+                    alert(`Unable to find ${location}`)
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();

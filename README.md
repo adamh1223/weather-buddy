@@ -21,6 +21,7 @@ SO THAT I can plan a trip accordingly
 
 ![markdown](./assets/images/markdown1.png)
 ![markdown](./assets/images/markdown2.png)
+![markdown](./assets/images/markdown3.png)
 
 
 ## Acceptance Criteria
