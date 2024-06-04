@@ -49,7 +49,7 @@ Built with:
 
 
 ## Link to Application
-
+https://adamh1223.github.io/weather-buddy/
 
 ## Link to GitHub Repository
 https://github.com/adamh1223/weather-buddy
