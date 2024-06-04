@@ -1,5 +1,5 @@
 # Work Day Scheduler Starter Code
-# Weather Dashboard
+# Weather Buddy
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@
 * [Links](#link-to-application)
 
 ## Description
-
+Welcome to Weather Buddy! This app takes a user search for city names, zip codes, and lat/long coordinates around the entire world, and displays a 10 day weather forecast for the searched location, including current conditions. The date, temperature, high, low, humidity, wind, and an icon are displayed for each day. All user searches are saved in the "recent searches" section, and each recent search is clickable and re-runs the search when clicked. The location that is retrieved based on the user search is displayed on the top of the page as the forecast is shown. 
 
 ## User Story
 AS A traveler
@@ -19,8 +19,8 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 
 
-![markdown](./Assets/markdown-1.png)
-![markdown](./Assets/markdown-2.png)
+![markdown](./assets/images/markdown1.png)
+![markdown](./assets/images/markdown2.png)
 
 
 ## Acceptance Criteria
